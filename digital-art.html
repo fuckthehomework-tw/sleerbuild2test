@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleeper Build-art</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="top"class="art-page">  <!-- Added id="top" here -->
+
+    <!-- Background music audio element -->
+    <audio id="background-music" loop>
+        <source src="./assets/music/Intergalactic Janet.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+
+
+
+
+
+    <!-- Header -->
+    <header>
+        <a href="index.html"> <!-- Link to the main page -->
+            <h1>Sleeper Art</h1>
+        </a>
+        <div class="buttons">
+            <button class="button" id="sound">🔊</button>
+            <!-- Tooltip for the sound button -->
+            <div class="tooltip">Click to play music</div>
+            <button class="button" id="language">🌐</button>
+            <button class="button" id="more">⋯</button>
+        </div>
+    </header> 
+
+    <!-- Dropdown Menu -->
+     <div id="dropdown-menu" class="dropdown-menu">
+        <ul>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Feature 1</a></li>
+            <li><a href="index.html">Home page</a></li>
+            <li>
+                <a href="#" id="adjust-volume">Adjust Volume</a> <!-- Correct placement for the "Adjust Volume" link -->
+                <div id="volume-slider-container" class="volume-slider-container">
+                    <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1" class="volume-slider">
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+  
+
+
+
+    <!-- Main Content Container -->
+    <main class="content-container">
+
+        <!-- Big Picture Section -->
+         <section class="big-picture">
+            <div class="slider-container-wrapper"></div>
+
+              <!-- Clouds Section -->
+              <div class="clouds left">
+                <img src="photo/cloudleft.png" alt="Cloud Left ">
+            </div>
+            <div class="clouds right">
+                <img src="photo/cloudright.png" alt="Cloud Right">
+            </div>
+            
+            <!-- Photo Slider Section (Remains the same) -->
+            <div class="photo-slider">
+                <div class="slider-container">
+                    <!-- Slider Images -->
+                    <div class="slider-images">
+                        <div class="slide"><img src="photo/Yamato  (1).jpg" alt="Image 1"></div>
+                        <div class="slide"><img src="photo/ado show halloween blurs (1).jpg" alt="Image 2"></div>
+                        <div class="slide"><img src="photo/scollpics/22.jpg" alt="Image 3"></div>
+                        <div class="slide"><img src="photo/插圖107ggg.jpg" alt="Image 4"></div>
+                        <div class="slide"><img src="photo/插圖107gggg.jpg" alt="Image 5"></div>
+                        <div class="slide"><img src="photo/photo1.jpg" alt="Image 6"></div>
+                        
+                    </div>
+                </div>
+                <!-- Custom Previous Button with Dynamic Preview -->
+                <div class="slider-button prev">
+                    <img src="" alt="Previous Photo" class="preview-img" id="prev-button-img">
+                </div>
+                
+                <!-- Custom Next Button with Dynamic Preview -->
+                <div class="slider-button next">
+                    <img src="" alt="Next Photo" class="preview-img" id="next-button-img">
+                </div>
+            </div>
+          
+
+
+            <p class="what-do-you-know">What do you want to know?</p>
+            <input type="search" class="search-bar" placeholder="Blender, Arts, Animation...">
+        </section>
+
+         <!-- Loading message when new content is being added -->
+    <div id="loading-message" style="display:none;">
+        <p>There's More...</p>
+    </div>
+         <!-- New Section for Infinite Scroll -->
+         <section id="infinite-scroll-gallery" class="infinite-scroll-gallery">
+             <!-- Dynamically loaded images will appear here -->
+         </section>
+          <!-- Modal Popup -->
+    <div id="photo-modal" class="photo-modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <img id="modal-image" src="" alt="Full Size Image">
+            <p id="modal-caption"></p>
+        </div>
+    </div>
+
+        
+
+    </main>
+
+    <!-- Home Icon Section -->
+    <section class="home-section">
+        <a href="#top" class="home-icon-container">
+            <img src="photo/up1.png" alt="Home" class="home-icon-img">
+            <p class="home-text">Home</p>
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <!-- In your base layout (e.g., footer or main template) -->
+         <script src="script.js"></script>
+
+        <div class="footer-class">
+            <h2>Sleeper Build</h2>
+        </div>
+        <div class="footer-class">
+            <h2>Sleeper Build</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://www.instagram.com/antony___the/">About</a></li>
+                <li><a href="https://shopee.tw/shop/886111937">Buy stuff</a></li>
+                <li><a href="gameweb/dist/index.html">Play Game</a></li>
+            </ul>
+        </div>
+        <div class="footer-class">
+            <h2>Contact</h2>
+            <ul>
+                <li><a href="https://theuselessweb.com/">Email</a></li>
+                <li><a href="https://theuselessweb.com/">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/antony___the/">Instagram</a></li>
+                <li><a href="https://theuselessweb.com/">Twitter</a></li>
+            </ul>
+        </div>
+        <div class="footer-class right-align">
+            <!-- Patreon Link with Icon -->
+            <a href="https://www.patreon.com/c/Antonyiguess">
+                Join our Patreon <img src="photo/patreon.png" alt="Patreon Icon" class="footer-icon">
+            </a><br>
+
+            <!-- Discord Link with Icon -->
+            <a href="https://discord.gg/AU7UNYvE">
+                Join our Discord <img src="photo/discord.png" alt="Discord Icon" class="footer-icon">
+            </a>
+        </div>
+    </footer>
+
+         <!-- Fixed Scroll to Top Button -->
+         <a href="#top" id="scroll-to-top">
+            <img src="photo/arrowup1.png" alt="Scroll to Top">
+        </a>
+    
+   
+    
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
+
+
+    
+</body>
+</html>
