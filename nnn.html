@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleeper Build</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="nnn-page" id="topdd">
+
+    <!-- Background music audio element -->
+    <audio id="background-music" loop>
+        <source src="assets/music/Windows 7 All sound effects.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="why-home-music" src="assets/music/The Sound of dial-up Internet.mp3" loop preload="auto"></audio>
+
+  
+
+
+
+    <!-- Header -->
+    <header>
+        <h1></h1>
+        <div class="buttons">
+            <button class="button" id="sound">🔊</button>
+            <!-- Tooltip for the sound button -->
+            <div class="tooltip">Click to play music</div>
+            <button class="button" id="language">🌐</button>
+            <button class="button" id="more">⋯</button>
+        </div>
+    </header>
+  
+
+ <!-- Dropdown Menu -->
+     <div id="dropdown-menu" class="dropdown-menu">
+        <ul>
+            <li><a href="#">Adjust Volume</a></li>
+            <li><a href="index.html">Adjust Volume</a></li>
+            <li><a href="#" id="why-home-page">Why Home Page</a></li> <!-- Link to trigger music -->
+            <li>
+                <a href="#" id="adjust-volume">Adjust Volume</a> <!-- Correct placement for the "Adjust Volume" link -->
+                <div id="volume-slider-container" class="volume-slider-container">
+                    <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1" class="volume-slider">
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    
+ 
+
+    
+
+    <!-- Clouds Section -->
+
+
+    <div id="clouds" class="clouds"></div>
+
+    <div class="clouds left">
+        <img src="photo/cloudleft.png" alt="Cloud Left">
+    </div>
+    <div class="clouds right">
+        <img src="photo/cloudright.png" alt="Cloud Right">
+    </div>
+
+    <!-- New Clouds Section -->
+    <div class="clouds new-left">
+        <img src="photo/cloudleft.png" alt="New Cloud Left">
+    </div>
+    <div class="clouds new-right">
+        <img src="photo/cloudright.png" alt="New Cloud Right">
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="content-container">
+        <!-- Big Picture Section -->
+        <section class="big-picture">
+            <img id="main-image" src="photo/main_r2.png" alt="Main Image" style="opacity: 1;">
+                <!-- Banner Section with 3D Slider -->
+                <div class="banner">
+                    <div class="slider" style="--quantity: 10">
+                        <div class="item" style="--position: 1"><img src="photo/eye2.png" alt="Eye Image 1"></div>
+                        <div class="item" style="--position: 2"><img src="photo/eye2.png" alt="Eye Image 2"></div>
+                        <div class="item" style="--position: 3"><img src="photo/eye2.png" alt="Eye Image 3"></div>
+                        <div class="item" style="--position: 4"><img src="photo/eye2.png" alt="Eye Image 4"></div>
+                        <div class="item" style="--position: 5"><img src="photo/eye2.png" alt="Eye Image 5"></div>
+                        <div class="item" style="--position: 6"><img src="photo/eye2.png" alt="Eye Image 6"></div>
+                        <div class="item" style="--position: 7"><img src="photo/eye2.png" alt="Eye Image 7"></div>
+                        <div class="item" style="--position: 8"><img src="photo/eye2.png" alt="Eye Image 8"></div>
+                        <div class="item" style="--position: 9"><img src="photo/eye2.png" alt="Eye Image 9"></div>
+                        <div class="item" style="--position:10"><img src="photo/eye2.png" alt="Eye Image 10"></div>
+                    </div>
+            <p class="what-do-you-know">?</p>
+            <input type="search" class="search-bar" placeholder="इल्लुमिनाति यहाँ कभी नहीं है">
+        </section>
+
+       
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <!-- In your base layout (e.g., footer or main template) -->
+         <script src="script.js"></script>
+
+        
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
