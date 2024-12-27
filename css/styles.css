@@ -1,0 +1,1647 @@
+/* General Styling */
+body {
+    font-family: 'Rozha One', serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    transition: background-color 0.7s ease;  /* Smooth transition for color change */
+}
+
+/* Main Page Styling */
+body.main-page {
+    background-color: #05243b; /* Initial background color for the main page */
+}
+
+/* Art Page Styling */
+body.art-page {
+    background-color: #0c0733; /* Initial background color for the art page */
+}
+
+/* Add specific transitions or styles for each page if needed */
+body.main-page {
+    /* Example: Add a background gradient for the main page */
+    background: linear-gradient(to bottom, #010f1b, #001f4d); /* Change to darker blue as user scrolls */
+}
+
+
+
+
+
+
+
+h1 {
+    margin-left: 20px;
+    font-size: 2em;
+}
+/* Make sure the title stays white */
+h1 {
+    color: white;
+}
+
+/* Optional: Remove underline from the link */
+a {
+    text-decoration: none;
+}
+
+
+
+
+
+
+/* Button Styling */
+button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8em;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+
+
+
+/* Hover effect for buttons with dynamic color */
+button:hover {
+    color: hsl(var(--random-hue), 100%, 50%);
+    transform: scale(1.1); /* Subtle scaling on hover */
+}
+
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+/* General styling for the header title */
+header h1 {
+    font-size: 2em; /* Default font size */
+    text-align: center; /* Center the title */
+}
+
+/* Medium screens */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.3em; /* Slightly smaller font size for medium screens */
+    }
+}
+
+/* Small screens (phones) */
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 1.8em; /* Smaller font size for small screens */
+    }
+}
+
+
+
+
+header .buttons {
+    display: flex;
+    gap: 10px;
+    padding-right: 20px; /* Add padding to the right to shift them to the left */
+}
+
+
+
+
+/* Additional styles */
+:root {
+    --random-hue: 180;
+}
+
+
+
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #072033;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: auto;
+    min-width: 180px;
+    z-index: 1000; /* Ensure the dropdown appears above other content */
+}
+
+
+
+
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.dropdown-menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+}
+
+
+
+
+.dropdown-menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+}
+
+
+
+
+.dropdown-menu ul li a:hover {
+    background-color: #1a1d26;
+    color: hsl(var(--random-hue), 100%, 50%);
+}
+
+
+
+
+/* Remove bottom border for the last item */
+.dropdown-menu ul li:last-child {
+    border-bottom: none;
+}
+
+
+
+
+/* Style for the Adjust Volume button inside the dropdown menu */
+#adjust-volume {
+    color: white; /* Ensures the text is white */
+    cursor: pointer;
+    text-decoration: none; /* Remove the underline */
+    font-size: 16px;
+    display: block; /* Ensures it behaves as a block element */
+    padding: 10px 0; /* Adjust padding for a better layout */
+    background-color: transparent; /* No background color for the link */
+    transition: color 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+/* Hover effect for Adjust Volume (matching Settings block) */
+#adjust-volume:hover {
+    background-color: #37034d; /* Light gray on hover */
+    transform: scale(1.05); /* Subtle scaling on hover */
+}
+
+
+
+
+/* Initially hide the volume slider */
+#volume-slider-container {
+    display: none; /* Hide slider by default */
+    position: absolute;
+    top: 78%;  /* Align with the top of the button */
+    left: 15px; /* Align with the left of the button */
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%; /* Make it take the full width of the button */
+    text-align: center;
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+
+
+
+/* When the volume slider is active, display it */
+#adjust-volume.active + #volume-slider-container {
+    display: block;
+}
+
+
+
+
+/* Style the slider's track (the bar itself) */
+#volume-slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+}
+
+
+
+
+/* Style the slider's thumb (the circular handle) */
+#volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white; /* White thumb */
+    cursor: pointer;
+}
+
+
+
+
+#volume-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white; /* White thumb */
+    cursor: pointer;
+}
+
+
+
+
+#volume-slider::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white; /* White thumb */
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* Make sure the container is positioned relative */
+.buttons {
+    position: relative;
+    display: inline-block;
+}
+
+
+
+
+/* Tooltip style */
+.tooltip {
+    visibility: hidden; /* Hide initially */
+    width: 120px;
+    background-color: #150725;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 30px; /* Position it above the button */
+    left: 13%;
+    transform: translateX(-50%); /* Center it */
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0s 0.3s; /* Ensure visibility transition is delayed */
+}
+
+
+
+
+/* Tooltip becomes visible on hover if not clicked */
+#sound:hover + .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease, visibility 0s; /* Immediate visibility change on hover */
+}
+
+
+
+
+
+
+/* arrow up */
+/* Scroll to Top Button */
+#scroll-to-top {
+    position: fixed; /* Keeps the button fixed in the same position */
+    bottom: 20px; /* Position 20px above the bottom of the screen */
+    right: 20px; /* Position 20px from the right side of the screen */
+    width: 50px; /* Button width */
+    height: 50px; /* Button height */
+    background-color: #030213; /* Dark background color */
+    border-radius: 50%; /* Rounded button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: shadow for better visibility */
+    z-index: 1000; /* Ensures the button stays above most content */
+    cursor: pointer;
+    text-decoration: none; /* Remove underline */
+    opacity: 0.7; /* Initial semi-transparent state */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Arrow Image Inside the Button */
+#scroll-to-top img {
+    width: 24px; /* Adjust image size */
+    height: 24px;
+    filter: invert(100%); /* Optional: makes the arrow white for contrast */
+}
+
+/* Hover Effect */
+#scroll-to-top:hover {
+    opacity: 1; /* Full opacity on hover */
+    transform: scale(1.2); /* Slightly enlarge the button on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhance shadow for hover effect */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Adjust Volume button */
+#adjust-volume {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 5px 0;
+    background-color: transparent;
+    transition: color 0.3s ease;
+    margin-left: 6px;  /* Move the text a bit to the right */
+}
+
+
+
+
+/* Hide the text when the slider is active */
+#adjust-volume.active {
+    visibility: hidden; /* Hide the text but maintain the space */
+}
+
+
+
+
+/* Hover effect for Adjust Volume */
+#adjust-volume:hover {
+    color: hsl(var(--random-hue), 100%, 50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 10%;
+    box-sizing: border-box;
+    
+}
+
+
+
+
+.big-picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+
+
+/* General styling for the image */
+.big-picture img {
+    width: 100%; /* Responsive width */
+    max-width: 900px; /* Limit the maximum width */
+    opacity: 1;
+    transition: width 0.5s ease; /* Smooth transition for width change */
+}
+
+/* For larger screens, adjust the width */
+@media (min-width: 1200px) {
+    .big-picture img {
+        width: 120%; /* Make the image wider */
+        max-width: none; /* Remove max-width constraint */
+       
+    }
+}
+
+
+
+
+
+/* Photo Slider Styles */
+.photo-slider {
+    position: relative;
+    width: 90%; /* Adjust as needed */
+    margin: 0 auto;
+    /* max-width: 1200px; Optional: To limit the width on larger screens */
+  }
+ 
+  .slider-container {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 590px; /* You can adjust this height to make it as tall or short as needed */
+  }
+
+
+
+  .slider-images {
+    display: flex;
+    /* Cool easing for transitions */
+    /* transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);  */
+   
+    /* transform: perspective(600px) rotateY(-20deg);
+    transition: transform 0.7s ease-in-out; */
+    width: 100%;
+    height: 100%;
+  }
+ 
+  .slide {
+    flex: 0 0 100%;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+ 
+
+
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 20px 20px; /* Different radii for each corner */
+    box-shadow: 0 4px 10px rgba(138, 20, 20, 0.2); /* Optional shadow */
+    transition: border-radius 0.5s ease; /* Smooth transition on hover */
+}
+
+/* Add a hover effect */
+.slide img:hover {
+    border-radius: 30px 30px 30px 30px; /* Reverse the radii */
+}
+
+ 
+
+
+
+
+
+
+
+/* General Slider Button Styles */
+.slider-button {
+    position: absolute;
+    top: 0; /* Align to the top of the slider */
+    bottom: 0; /* Align to the bottom of the slider */
+    width: 10vw; /* Set the width of the buttons (you can adjust this size) */
+    height: 100%; /* Make buttons the same height as the slider */
+    background-color: transparent; /* Remove background */
+    border: none; /* Remove button border */
+    padding: 10px; /* Add padding inside the button */
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center; /* Center the preview image inside the button */
+    align-items: center; /* Center the preview image vertically */
+    overflow: hidden; /* Hide the part of the image outside the button */
+    border-radius: 20px 20px 20px 20px; /* Different radii for each corner */
+}
+
+/* Previous Button */
+.slider-button.prev {
+    left: -200px; /* Position it on the left side */
+}
+
+/* Next Button */
+.slider-button.next {
+    right: -200px; /* Position it on the right side */
+}
+
+/* Image Styles Inside Buttons (Preview Images) */
+.slider-button img.preview-img {
+    width: 200%;  /* Make the image wider (you can increase this percentage) */
+    height: 100%;  /* Make image fill the height of the button */
+    object-fit: cover;  /* Ensure the image fits without distortion */
+    transition: opacity 0.3s ease;  /* Smooth transition for opacity */
+}
+
+/* Apply opacity gradient effect */
+.slider-button:hover img.preview-img {
+    opacity: 1; /* Full opacity on hover */
+    
+}
+
+/* Optional: Add the opacity fade-out effect on the edges of the preview image */
+.slider-button img.preview-img {
+    opacity: 0.4; /* Set initial low opacity */
+}
+
+/* Gradient for the left side (for previous button) */
+.slider-button.next img.preview-img {
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%); /* Fade from full opacity on the left to transparent on the right */
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%); /* For Safari */
+}
+
+/* Gradient for the right side (for next button) */
+.slider-button.prev img.preview-img {
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%); /* Fade from full opacity on the right to transparent on the left */
+    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%); /* For Safari */
+}
+
+
+
+/* Hover Effect for Preview Images */
+.slider-button img.preview-img:hover {
+    opacity: 0.8;  /* Slight transparency on hover */
+    
+}
+
+/* Default Image */
+.slider-button img.default {
+    opacity: 1; /* Visible by default */
+    z-index: 1; /* Ensure it appears above */
+}
+
+/* Hover Image */
+.slider-button img.hover {
+    opacity: 0; /* Hidden by default */
+    z-index: 0; /* Below the default image */
+}
+
+/* On Hover, Swap Images */
+.slider-button:hover img.default {
+    opacity: 0; /* Hide default */
+}
+
+.slider-button:hover img.hover {
+    opacity: 1; /* Show hover */
+}
+
+
+/* Media Query for Smaller Screens */
+@media (max-width: 900px) {
+    .slider-button img.preview-img {
+        width: 11vw; /* Make preview images bigger on smaller screens */
+    }
+    .slider-container {
+        height: 420px; /* Reduce height for medium screens */
+    }
+}
+
+/* Media Query for Extra Small Screens (Optional) */
+@media (max-width: 600px) {
+    .slider-button img.preview-img {
+        width: 14vw; /* Increase size even more on very small screens */
+    }
+    .slider-container {
+        height: 240px; /* Further reduce height for small screens */
+    }
+}
+
+/* Adjust height for very small screens */
+@media (max-width: 400px) {
+    .slider-container {
+        height: 150px; /* Minimum height for very small screens */
+    }
+}
+
+/* Medium screens (Tablet and smaller screens) */
+@media (max-width: 1024px) {
+    .slider-button.prev {
+        left: -100px; /* Adjust distance for medium screens */
+    }
+
+    .slider-button.next {
+        right: -100px; /* Adjust distance for medium screens */
+    }
+}
+
+/* Small screens (Phone and smaller screens) */
+@media (max-width: 768px) {
+    .slider-button.prev {
+        left: -80px; /* Adjust distance for smaller screens */
+    }
+
+    .slider-button.next {
+        right: -80px; /* Adjust distance for smaller screens */
+    }
+}
+
+/* Very small screens (Phone portrait mode) */
+@media (max-width: 480px) {
+    .slider-button.prev {
+        left: -60px; /* Further adjust for very small screens */
+    }
+
+    .slider-button.next {
+        right: -60px; /* Further adjust for very small screens */
+    }
+}
+
+
+
+
+
+
+
+.what-do-you-know {
+    margin-top: 5%;
+    font-size: 2em;
+}
+/* For large screens (no changes to text size) */
+@media (min-width: 1200px) {
+    .what-do-you-know {
+        font-size: 24px; /* Default size for large screens */
+    }
+}
+
+/* For smaller screens (below 768px) */
+@media (max-width: 768px) {
+    .what-do-you-know {
+        font-size: 20px; /* Slightly smaller text for smaller screens */
+    }
+}
+/* For very small screens (below 480px) */
+@media (max-width: 480px) {
+    .what-do-you-know {
+        font-size: 16px; /* Even smaller text for very narrow screens */
+    }
+}
+
+
+
+
+.search-bar {
+    border-radius: 25px;
+    padding: 12px;
+    margin-top: px;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 420px;
+    font-family: 'Rozha One', serif;  /* Apply 'Rozha One' font here */
+}
+
+/* Responsive adjustments for the search bar */
+@media (max-width: 900px) {
+    .search-bar {
+        width: 90%; /* Make the search bar take more width on smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+        margin-top: 10px; /* Add some space on top */
+        font-size: 14px; /* Adjust font size for readability on smaller screens */
+    }
+}
+
+
+/* make media later */
+
+
+/* Skill Section Styling */
+.skills {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 50px;
+    gap: 5%; /* Adds spacing between skill sections */
+}
+
+
+
+
+.skill {
+    position: relative;
+    width: 47.5%; /* Ensures alignment with left and right edges */
+}
+
+
+
+
+.skill img {
+    width: 100%;
+    opacity: 1;
+}
+
+/* Hover effect for Blender image */
+.skill .blender-img:hover {
+    transform: translateX(-25%) translateY(0%) scale(1.05); /* Scale while keeping current X, Y position */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+
+
+/* Specific size for the Blender image within the skill section */
+.skill .blender-img {
+    width: 140%; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+    transform: translateX(-25%) translateY(0%); /* Adjust X and Y positions */
+}
+/* Specific size for the Music image within the skill section */
+.skill .music-img {
+    width: 107%; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+    transform: translateX(8%) translateY(16.5%); /* Adjust X and Y positions */
+    border-radius: 15px; /* Adds rounded edges, adjust value for more or less rounding */
+}
+
+/* Hover effect for Music image */
+.skill .music-img:hover {
+    transform: translateX(8%) translateY(16.5%) scale(1.05); /* Scale while keeping current X, Y position */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+
+
+
+/* Third Large Image Section */
+.third-big-picture {
+    width: 100%;
+    max-width: 1200px;
+    margin: 5px auto 0;
+    text-align: center;
+}
+
+.third-big-picture img {
+    width: 120%;
+}
+
+/* Specific size for the Digital Art image within the third-big-picture section */
+.third-big-picture .art-img {
+    width: 120%; /* Default width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    transform: translateX(-10%) translateY(-1%); /* Adjust X and Y positions */
+    transform-origin: center center; /* Scale from the center of the image */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for Digital Art image */
+.third-big-picture .art-img:hover {
+    transform: translateX(-10%) translateY(-1%) scale(1.02); /* Enlarge without shifting alignment */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Enable smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+/* Home Icon Section */
+.home-section {
+    text-align: center;
+    margin-top: 5px;
+    position: relative;
+    z-index: 1; /* Ensures the section stays above other content */
+}
+
+
+
+
+/* Container for the icon and text */
+.home-icon-container {
+    display: inline-block;
+    text-align: center;
+    margin-top: 15vw;
+    cursor: pointer; /* Added cursor pointer for better user interaction */
+    text-decoration: none; /* Removed underline from the link */
+}
+
+
+
+
+/* Home Icon Styling */
+.home-icon-img {
+    width: 3em;   /* Set the icon size to match text */
+    height: 3em;  /* Set the height to make it a square */
+    margin-bottom:4px;
+}
+
+
+
+
+/* Home Text Styling */
+.home-text {
+    font-size: 1.4em;
+    color: white;
+    margin-top: 0.1px;
+    margin-bottom:10px;
+}
+
+
+
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #010111;
+    margin-top: autopx; /* Space between content and footer */
+    position: relative;
+    z-index: 0; /* Ensures the footer is beneath other content */
+}
+
+
+
+
+footer .footer-class {
+    width: 23%;
+}
+
+
+
+
+
+
+
+
+
+footer .footer-class ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+
+
+footer .footer-class ul li {
+    margin-bottom: 10px;
+}
+
+
+
+
+footer .footer-class ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+
+
+footer .footer-class ul li a:hover {
+    color: hsl(var(--random-hue), 100%, 50%);
+}
+
+
+
+
+footer .footer-class.right-align {
+    align-self: flex-start;
+}
+
+
+
+
+/* Link Styling in Footer */
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+
+
+footer a:hover {
+    color: hsl(var(--random-hue), 100%, 50%);
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+body, html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+
+
+
+
+/* Cloud container styling */
+.clouds {
+    position: absolute;
+    top: 50%; /* Vertically center the clouds */
+    left: 50%; /* Horizontally center the clouds */
+    width: 14vw; /* Responsive width */
+    max-width: 200px; /* Maximum width */
+    max-height: 150px; /* Maximum height */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 2s ease-in-out, transform 2s ease-out; /* Smooth transitions */
+    pointer-events: none; /* Prevent interaction with clouds */
+    transform: translate(-50%, -50%); /* Use translate to adjust centering */
+}
+
+
+
+
+.clouds.visible {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+
+
+.clouds.left {
+    transform: translateX(-300%) translateY(-50%); /* Center the left cloud horizontally */
+    left: 25%; /* Adjust the left cloud's initial position */
+}
+
+
+
+
+.clouds.right {
+    transform: translateX(150%) translateY(-50%); /* Center the right cloud horizontally */
+    left: 75%; /* Adjust the right cloud's initial position */
+}
+
+
+
+
+
+/* New Clouds - Higher than Home Text */
+.clouds.new-left {
+    top: 40%; /* Adjust position higher than home text */
+    left: 10%; /* Start off-screen on the left side */
+    opacity: 1;  /* Make clouds always visible */
+    transition: none;  /* Remove opacity transition for constant visibility */
+    transform: translateX(-140%) translateY(-150%); /* Keep it horizontally and vertically centered */
+}
+
+
+
+
+.clouds.new-right {
+    top: 40%; /* Adjust position higher than home text */
+    right: 10%; /* Start off-screen on the right side */
+    opacity: 1;  /* Make clouds always visible */
+    transition: none;  /* Remove opacity transition for constant visibility */
+    transform: translateX(350%) translateY(-150%); /* Keep it horizontally and vertically centered */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Cloud styles specific to the art page */
+.art-page .clouds {
+    position: absolute;
+    top: 50%; /* Vertically center the clouds */
+    left: 50%; /* Horizontally center the clouds */
+    width: 14vw; /* Responsive width */
+    max-width: 200px; /* Maximum width */
+    max-height: 150px; /* Maximum height */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 2s ease-in-out, transform 2s ease-out; /* Smooth transitions */
+    pointer-events: none; /* Prevent interaction with clouds */
+    transform: translate(-50%, -50%); /* Center the clouds using translate */
+}
+
+
+
+
+/* When the clouds should become visible */
+.art-page .clouds.visible {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+
+
+/* Position for the left cloud */
+.art-page .clouds.left {
+    transform: translateX(-300%) translateY(-50%); /* Move left cloud out initially */
+    left: 25%; /* Adjust initial horizontal position */
+}
+
+
+
+
+/* Position for the right cloud */
+.art-page .clouds.right {
+    transform: translateX(150%) translateY(-50%); /* Move right cloud out initially */
+    left: 75%; /* Adjust initial horizontal position */
+}
+
+
+
+
+/* Adjustments for responsive behavior */
+@media (max-width: 900px) {
+    /* Adjust the clouds horizontally for smaller screens using transform */
+    .art-page .clouds.left {
+        transform: translateX(-180%) translateY(0); /* Move left cloud slightly right */
+    }
+    .art-page .clouds.right {
+        transform: translateX(160%) translateY(0); /* Move right cloud slightly left */
+    }
+}
+
+
+@media (max-width: 600px) {
+    /* Move clouds even further for small screens */
+    .art-page .clouds.left {
+        transform: translateX(-100%) translateY(70%); /* Move left cloud slightly right */
+    }
+    .art-page .clouds.right {
+        transform: translateX(260%) translateY(70%); /* Move right cloud slightly left */
+    }
+}
+
+/* For large screens (no shift of left cloud) */
+@media (min-width: 1200px) {
+    .clouds.left {
+        left: 25%; /* Maintain centered position */
+    }
+   
+    .clouds.new-left,
+    .clouds.new-right {
+        top: 40%; /* Default position for larger screens */
+    }
+}
+
+
+/* Media query half screen */
+@media (max-width: 900px) {
+    /* For narrow screens, shift the left cloud slightly to the right */
+    .clouds.left {
+        left: 40%; /* Move it to the right as the screen narrows */
+    }
+
+
+    /* Move the new left cloud to the right as well */
+    .clouds.new-left {
+        transform: translateX(-30%) translateY(-60%); /* Adjust as needed */
+    }
+
+    /* Adjust the new-right cloud */
+    .clouds.new-right {
+        right: 30%; /* Adjust right position */
+        transform: translateX(300%) translateY(-60%); /* Adjust as needed */
+    }
+}
+
+
+
+
+/* For even smaller screens, adjust it further */
+@media (max-width: 500px) {
+    .clouds.left {
+        transform: translateX(-10%) translateY(40%); /* Adjust as needed */
+        left: 15%; /* Adjust as needed */
+    }
+
+    .clouds.right {
+        transform: translateX(650%) translateY(40%); /* Adjust as needed */
+        left: 15%; /* Adjust as needed */
+    }
+
+
+
+    /* Adjust the new left cloud to stay within view */
+    .clouds.new-left {
+        left: 44%; /* Keep it within the viewable area */
+        transform: translateX(-180%) translateY(-20%); /* Adjust as needed */
+    }
+
+    /* Adjust the new-right cloud to stay within view */
+    .clouds.new-right {
+        right: 25%; /* Adjust right position */
+        transform: translateX(380%) translateY(-20%); /* Adjust as needed */
+    }
+}
+/* For even smaller screens, this will beeeee toooooo smallllllll but idk this wont show out any way */
+
+
+
+
+
+
+
+
+
+/* Cloud animation when scrolled into view */
+@keyframes floatClouds {
+    0% {
+        transform: translateX(-170px);
+    }
+    50% {
+        transform: translateX(-150px); /* Small left-right movement */
+    }
+    100% {
+        transform: translateX(-170px); /* Small left-right movement */
+    }
+}
+
+.clouds img {
+    width: 300%;
+    height: auto;
+    animation: floatClouds 10s linear infinite; /* Continuous floating effect */
+}
+
+
+/* Visibility for new clouds */
+.clouds.new-left, .clouds.new-right {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade-in effect */
+}
+
+/* Ensure visibility transition when in view */
+.clouds.new-left.visible, .clouds.new-right.visible {
+    opacity: 0; /* Set opacity to 1 when the 'visible' class is added */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade-in effect */
+}
+
+
+/* Footer Link with Icon Styling */
+footer .footer-class a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em; /* Same size for text */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Add space between icon and text */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+
+
+
+/* Footer Icon Size */
+.footer-icon {
+    width: 30px; /* Matches the text size */
+    height: 30px; /* Maintain square aspect ratio */
+    object-fit: contain; /* Keep aspect ratio */
+    transition: transform 0.3s ease; /* Smooth icon size transition */
+}
+
+
+
+
+/* Hover effect for the icon */
+footer .footer-class a:hover .footer-icon {
+    transform: scale(1.1); /* Slight zoom-in effect on hover */
+}
+
+
+
+
+/* Hover effect for the footer links */
+footer .footer-class a:hover {
+    color: hsl(var(--random-hue), 100%, 50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer title (keeps a fixed size) */
+.footer-class h2 {
+    font-size: 1.5em; /* Keep this consistent */
+}
+
+
+
+
+/* Footer link text, including "Join our Patreon" and "Join our Discord" */
+.footer-class ul li a,
+.footer-class.right-align a {
+    font-size: 1em; /* Default size for larger screens */
+}
+
+
+
+
+/* Medium screens */
+@media (max-width: 768px) {
+    .footer-class ul li a,
+    .footer-class.right-align a {
+        font-size: 0.9em; /* Slightly smaller for links */
+    }
+
+    .footer-class a.sleeper-build-link {
+        font-size: 1em; /* Adjust the first Sleeper Build link size */
+    }
+
+    .footer-class h2 {
+        font-size:0.96em ; /* Adjust titles like Sleeper Build and Contact */
+    }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+    .footer-class ul li a,
+    .footer-class.right-align a {
+        font-size: 0.8em; /* Smaller for links */
+    }
+
+    .footer-class a.sleeper-build-link {
+        font-size: 0.9em; /* Smaller size for the first Sleeper Build link */
+    }
+
+    .footer-class h2 {
+        font-size: 1.1em; /* Smaller size for titles like Sleeper Build and Contact */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Main container for gallery images */
+.infinite-scroll-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Style for individual gallery photos */
+.gallery-photo {
+    width: 30%;  /* Default to 3 items per row */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    object-fit: cover;  /* Ensures the image stays proportional and doesn't stretch */
+}
+
+
+
+/* Hover effect */
+.gallery-photo:hover {
+    transform: scale(1.05);
+}
+
+/* Media query for screens smaller than 1200px (2 items per row) */
+@media (max-width: 1200px) {
+    .gallery-photo {
+        width: 45%;  /* 2 items per row */
+    }
+}
+
+/* Media query for screens smaller than 768px (1 item per row) */
+@media (max-width: 768px) {
+    .gallery-photo {
+        width: 100%;  /* 1 item per row */
+    }
+}
+
+/* Content items styling */
+.content-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+
+#loading-message {
+    position: fixed;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    display: none; /* Hidden by default */
+}
+
+.content-item {
+    margin-bottom: 20px; /* Default margin */
+}
+.content-item:last-child {
+    margin-bottom: 100px; /* Extra space for the last item */
+}
+
+
+
+
+/* Modal Container */
+.photo-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Slightly darker background for emphasis */
+    overflow: auto; /* Allow scrolling if the content is too tall */
+    animation: fadeIn 0.3s ease; /* Smooth fade-in animation */
+}
+
+/* Modal Content with Glass Effect */
+.modal-content {
+    position: relative;
+    margin: 10% auto; /* Center the modal vertically */
+    padding: 20px;
+    border-radius: 12px;
+    width: 80%;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Support for Safari */
+    border: 1px solid rgba(108, 108, 230, 0.3); /* Light border to emphasize the glass effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    animation: scaleUp 0.3s ease; /* Smooth scale-up animation */
+}
+
+/* Image inside the modal */
+#modal-image {
+    max-width: 100%;
+    
+    object-fit: contain; /* Ensures the image scales correctly */
+    margin: auto; /* Centers the image vertically and horizontally */
+}
+
+/* Caption below the image */
+#modal-caption {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #000;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0; /* Makes the button invisible */
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.close:hover {
+    color: #f00; /* Red hover effect */
+    transform: rotate(90deg); /* Rotate effect for fun */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+
+/* Styles for the page with the class "nnn-page" */
+.nnn-page {
+    background-color: #f5f5f5; /* Light gray background */
+    color: #333; /* Darker text color */
+    font-size: 16px;
+    animation: flashBackground 1s infinite alternate; /* Flash effect */
+}
+
+/* Keyframes for the flashing background effect */
+@keyframes flashBackground {
+    0% { background-color: #ff0000; } /* Light gray */
+    50% { background-color: #c61e00; } /* Tomato red */
+    100% { background-color: #6a0000; } /* Light gray */
+}
+
+/* Specific styles for the element with id="top" */
+#topdd {
+    background-color: #874949; /* Tomato color for the top section */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Adjusting the top section with more styling */
+#topdd h1 {
+    font-size: 2.5em;
+}
+
+
+
+
+
+
+
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+}
+.banner .slider{
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    top: -70%;
+    left: calc(50% - 130px); /*meeeeeeee*/
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
+}
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+}
+
+
+.banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform:
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(550px);
+}
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner .content{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+.banner .content h1{
+    font-family: 'ICA Rubrik';
+    font-size: 16em;
+    line-height: 1em;
+    color: #25283B;
+    position: relative;
+}
+.banner .content h1::after{
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px #d2d2d2;
+    color: transparent;
+}
+.banner .content .author{
+    font-family: Poppins;
+    text-align: right;
+    max-width: 200px;
+}
+.banner .content h2{
+    font-size: 3em;
+}
+.banner .content .model{
+    background-image: url(images/model.png);
+    width: 90%;
+    height: 75vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: auto 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+}
+@media screen and (max-width: 1023px) {
+    .banner .slider{
+        width: 160px;
+        height: 190px;
+        left: calc(50% - 80px);
+        top: -40%;
+    }
+    .banner .slider .item{
+        transform:
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(300px);
+    }
+}
+@media screen and (max-width: 560px) {
+    .banner .slider{
+        width: 100px;
+        height: 10px;
+        left: calc(50% - 50px);
+        top: -90%;
+    }
+    .banner .slider .item{
+        transform:
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(18px);
+    }
+    
+}
+
